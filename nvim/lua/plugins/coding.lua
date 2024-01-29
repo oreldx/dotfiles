@@ -4,4 +4,7 @@ return {
         cmd = "IncRename",
         config = true,
     },
+    {
+        "xiyaowong/telescope-emoji.nvim",
+    },
 }

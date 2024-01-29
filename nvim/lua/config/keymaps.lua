@@ -28,9 +28,3 @@ keymap.set("n", "<C-w><left>", "<C-w><")
 keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
-
--- Tab handler
-keymap.set("n", "<C-t>t", ":tabedit<CR>", opts)
-keymap.set("n", "<C-t><Tab>", ":tabnext<CR>", opts)
-keymap.set("n", "<C-t><S-Tab>", ":tabprevious<CR>", opts)
-keymap.set("n", "<C-t>w", ":tabclose<CR>", opts)
