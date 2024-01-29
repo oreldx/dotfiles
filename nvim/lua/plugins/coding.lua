@@ -7,4 +7,7 @@ return {
     {
         "xiyaowong/telescope-emoji.nvim",
     },
+    {
+        "mg979/vim-visual-multi",
+    },
 }
