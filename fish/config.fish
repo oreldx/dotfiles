@@ -9,6 +9,7 @@ end
 function l
     set -l level
     set -l all
+    set -l args
 
     for arg in $argv
         switch $arg
@@ -25,7 +26,11 @@ function l
         end
     end
 
-    exa --icons --tree $level $all $args
+    exa --icons --tree $level $all $args -I __pycache__ --sort=type
+end
+
+function c
+    clear
 end
 
 set -U fish_user_paths $fish_user_paths ~/.local/bin
