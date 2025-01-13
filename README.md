@@ -25,14 +25,34 @@ echo /usr/local/bin/fish | sudo tee -a /etc/shells
 chsh -s /usr/bin/fish
 ```
 
+3. **Link Fish configuration file:**
+
+```
+ln -sf ~/.dotfiles/fish/config.fish ~/.config/fish/config.fish
+```
+4. **Install fisher**
+
+```
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+ln -sf ~/.dotfiles/fish/fish_plugins ~/.config/fish/fish_plugins
+fisher update
+```
+
+### Nerd fonts
+
+1. Download a [Nerd Font](https://www.nerdfonts.com/font-downloads)
+
+2. Unzip and copy to `~/.fonts`
+
+3. Run the command `fc-cache -fv` to manually rebuild the font cache
+
 ### Tmux Setup
 
 1. **Install Tmux:** Use your package manager to install tmux.
 2. **Install TPM (Tmux Plugin Manager):** Clone TPM:
-
-```
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-```
+    ```
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    ```
 
 3. **Configure Tmux:**
 
@@ -41,29 +61,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
   ln -s .dotfiles/.tmux.conf ~/.tmux.conf
   ```
 - Run tmux and press `PREFIX + r` to reload the configuration, then `PREFIX + I` to install TPM plugins.
-
-### Additional Tools
-
-- **Install Peco:** Follow instructions from [Peco GitHub](https://github.com/peco/peco).
-- **Install fzf:** Installation steps can be found on the [fzf GitHub page](https://github.com/junegunn/fzf).
-- **Install exa:** Instructions at [exa website](https://the.exa.website/).
-- **Install xclip:** Use your package manager to install xclip.
-
-### Fish Configuration
-
-- Link Fish configuration files:
-
-```
-ln -s .dotfiles/config.fish ~/.config/fish/config.fish
-ln -s .dotfiles/fish_plugins ~/.config/fish/fish_plugins
-ln -s .dotfiles/functions/gitmoji.fish ~/.config/fish/functions/gitmoji.fish
-```
-
-- **Install Fisher and Update Plugins:**
-
-```
-curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
-```
 
 ### Git and Editor Tools
 
