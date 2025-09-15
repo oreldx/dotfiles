@@ -34,3 +34,7 @@ function c
 end
 
 set -U fish_user_paths $fish_user_paths ~/.local/bin
+
+alias dcupd="docker compose up -d"
+alias dcdn="docker compose down"
+alias preset='set cur (git branch --show-current); and git checkout dev; and git pull origin dev; and git branch -d $cur'
