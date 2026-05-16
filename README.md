@@ -4,14 +4,6 @@ My personal dotfiles managed using [chezmoi](https://github.com/twpayne/chezmoi)
 
 ## 🚀 Usage
 
-### Clone the Repository
-
-First, clone the dotfiles repository and move it to the `.dotfiles` directory:
-```
-git clone git@github.com:oreldx/dotfiles.git
-mv dotfiles .dotfiles
-```
-
 ## Install Dependencies
 
 ### Ghostty
@@ -29,12 +21,7 @@ Use the one line installer to install [Ghostty](https://ghostty.org/docs/install
     echo /usr/local/bin/fish | sudo tee -a /etc/shells
     chsh -s /usr/bin/fish
     ```
-3. **Install fisher**
-    ```
-    curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
-    ln -sf ~/.dotfiles/fish/fish_plugins ~/.config/fish/fish_plugins
-    fisher update
-    ```
+
 
 ### Nerd fonts
 
@@ -110,6 +97,14 @@ sh -c "$(curl -fsLS https://get.chezmoi.io)"
 
 ## Apply the dotfiles
 
+NOTE: Probably check if a folder or a path should be specified
+
 ```bash
 sh -c "$(curl -fsLS https://get.chezmoi.io)" -- init --apply oreldx
+```
+
+**Install fisher**
+```
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+fisher update
 ```
